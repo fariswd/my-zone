@@ -1,8 +1,8 @@
 package com.masfaris.myzone
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 
@@ -14,11 +14,19 @@ class LoginActivity : AppCompatActivity () {
 
         val actionbar = supportActionBar
         actionbar!!.title = "Login Activity"
+
     }
 
     fun toHome(view: View) {
+        val sharedPrefs = this.getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
+        val editor = sharedPrefs.edit()
+        editor.putBoolean("IS_LOGIN", true)
+        editor.commit()
+
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
     }
+
+
 }

@@ -3,6 +3,7 @@ package com.masfaris.myzone
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
@@ -11,12 +12,13 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         val actionbar = supportActionBar
-        actionbar!!.title = "Profile Activity"
+        val name = intent.getStringExtra("name")
+
+        actionbar!!.title = name
         actionbar.setDisplayHomeAsUpEnabled(true)
 
-        val message = intent.getStringExtra(EXTRA_MESSAGE)
-//        println(message)
-        profileText.text = message
+        val image = intent.getStringExtra("image")
+        Picasso.get().load(image).into(profileImage)
     }
 
     override fun onSupportNavigateUp(): Boolean {
