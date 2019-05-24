@@ -1,8 +1,10 @@
 package com.masfaris.myzone
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 
 class LoginActivity : AppCompatActivity () {
 
@@ -12,11 +14,11 @@ class LoginActivity : AppCompatActivity () {
 
         val actionbar = supportActionBar
         actionbar!!.title = "Login Activity"
-        actionbar.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
+    fun toHome(view: View) {
+        val intent = Intent(this, HomeActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
