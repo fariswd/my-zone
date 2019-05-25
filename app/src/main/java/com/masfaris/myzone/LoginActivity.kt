@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.masfaris.myzone.navigation.Navigation
 
 class LoginActivity : AppCompatActivity () {
 
@@ -23,8 +24,7 @@ class LoginActivity : AppCompatActivity () {
         editor.putBoolean("IS_LOGIN", true)
         editor.commit()
 
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
+        Navigation().navigate(this, "Home")
         finish()
     }
 

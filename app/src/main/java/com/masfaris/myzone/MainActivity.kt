@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.masfaris.myzone.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,11 +16,9 @@ class MainActivity : AppCompatActivity() {
         val sharedPrefs = this.getSharedPreferences("LOGIN", Context.MODE_PRIVATE)
 
         if(sharedPrefs.getBoolean("IS_LOGIN", false)) {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+            Navigation().navigate(this,"Home")
         } else {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            Navigation().navigate(this,"Login")
         }
 
         finish()

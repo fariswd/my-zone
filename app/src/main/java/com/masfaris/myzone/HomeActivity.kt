@@ -7,6 +7,8 @@ import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import com.masfaris.myzone.navigation.Navigation
+import com.masfaris.myzone.navigation.NavData
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -112,10 +114,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun toProfiles(name: String, image: String) {
-        val intent = Intent(this, ProfileActivity::class.java)
-        intent.putExtra("name", name)
-        intent.putExtra("image", image)
-        startActivity(intent)
+        Navigation().navigate(this, "Profile", listOf<NavData>(
+            NavData("name", name),
+            NavData("image", image)
+        ))
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -138,8 +140,8 @@ class HomeActivity : AppCompatActivity() {
         val editor = sharedPrefs.edit()
         editor.remove("IS_LOGIN")
         editor.commit()
-        val intent = Intent(this,MainActivity::class.java)
-        startActivity(intent)
+
+        Navigation().navigate(this,"Index")
         finish()
     }
 
