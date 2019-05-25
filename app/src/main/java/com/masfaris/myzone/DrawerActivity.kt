@@ -52,77 +52,17 @@ class DrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
     }
 
     fun showProfiles(){
-        Picasso.get().load(member[0].image).into(imageMember);
-        nameMember.text = member[0].name
-        imageMember.setOnClickListener {
-            toProfiles(member[0].name, member[0].image)
-        }
+        val imageMemberIds = listOf(
+                imageMember, imageMember2, imageMember3, imageMember4, imageMember5, imageMember6, imageMember7, imageMember8, imageMember9, imageMember10, imageMember11, imageMember12)
+        val nameMemberIds = listOf(
+                nameMember, nameMember2, nameMember3, nameMember4, nameMember5, nameMember6, nameMember7, nameMember8, nameMember9, nameMember10, nameMember11, nameMember12)
 
-        Picasso.get().load(member[1].image).into(imageMember2);
-        nameMember2.text = member[1].name
-        imageMember2.setOnClickListener {
-            toProfiles(member[1].name, member[1].image)
-        }
-
-        Picasso.get().load(member[2].image).into(imageMember3);
-        nameMember3.text = member[2].name
-        imageMember3.setOnClickListener {
-            toProfiles(member[2].name, member[2].image)
-        }
-
-        Picasso.get().load(member[3].image).into(imageMember4);
-        nameMember4.text = member[3].name
-        imageMember4.setOnClickListener {
-            toProfiles(member[3].name, member[3].image)
-        }
-
-        Picasso.get().load(member[4].image).into(imageMember5);
-        nameMember5.text = member[4].name
-        imageMember5.setOnClickListener {
-            toProfiles(member[4].name, member[4].image)
-        }
-
-        Picasso.get().load(member[5].image).into(imageMember6);
-        nameMember6.text = member[5].name
-        imageMember6.setOnClickListener {
-            toProfiles(member[5].name, member[5].image)
-        }
-
-        Picasso.get().load(member[6].image).into(imageMember7);
-        nameMember7.text = member[6].name
-        imageMember7.setOnClickListener {
-            toProfiles(member[6].name, member[6].image)
-        }
-
-        Picasso.get().load(member[7].image).into(imageMember8);
-        nameMember8.text = member[7].name
-        imageMember8.setOnClickListener {
-            toProfiles(member[7].name, member[7].image)
-        }
-
-        Picasso.get().load(member[8].image).into(imageMember9);
-        nameMember9.text = member[8].name
-        imageMember9.setOnClickListener {
-            toProfiles(member[8].name, member[8].image)
-        }
-
-
-        Picasso.get().load(member[9].image).into(imageMember10);
-        nameMember10.text = member[9].name
-        imageMember10.setOnClickListener {
-            toProfiles(member[9].name, member[9].image)
-        }
-
-        Picasso.get().load(member[10].image).into(imageMember11);
-        nameMember11.text = member[10].name
-        imageMember11.setOnClickListener {
-            toProfiles(member[10].name, member[10].image)
-        }
-
-        Picasso.get().load(member[11].image).into(imageMember12);
-        nameMember12.text = member[11].name
-        imageMember12.setOnClickListener {
-            toProfiles(member[11].name, member[11].image)
+        for(i in member.indices) {
+            Picasso.get().load(member[i].image).into(imageMemberIds[i]);
+            nameMemberIds[i].text = member[i].name
+            imageMemberIds[i].setOnClickListener {
+                toProfiles(member[i].name, member[i].image)
+            }
         }
     }
 
