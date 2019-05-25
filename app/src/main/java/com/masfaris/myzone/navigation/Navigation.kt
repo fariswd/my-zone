@@ -2,10 +2,7 @@ package com.masfaris.myzone.navigation
 
 import android.content.Context
 import android.content.Intent
-import com.masfaris.myzone.HomeActivity
-import com.masfaris.myzone.LoginActivity
-import com.masfaris.myzone.MainActivity
-import com.masfaris.myzone.ProfileActivity
+import com.masfaris.myzone.*
 
 class Navigation () {
     fun navigate(
@@ -34,7 +31,7 @@ class Navigation () {
             }
 
             "Home" -> {
-                val intent = Intent(context, HomeActivity::class.java)
+                val intent = Intent(context, DrawerActivity::class.java)
                 start(context, intent, navData)
             }
 

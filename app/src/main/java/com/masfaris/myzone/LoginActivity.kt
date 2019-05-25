@@ -13,8 +13,8 @@ class LoginActivity : AppCompatActivity () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val actionbar = supportActionBar
-        actionbar!!.title = "Login Activity"
+//        val actionbar = supportActionBar
+//        actionbar!!.title = "Login Activity"
 
     }
 
