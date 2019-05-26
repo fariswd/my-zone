@@ -12,16 +12,19 @@ Kotlin android native:
 - Slide animation on activity change
 - Todo List Activity
 - Recycle View CRUD with adapter
+- User List jsonplaceholder 
+- Retrofit package (REST API handle)
+- rxJava package (async handle)
 
 # SS
-<img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss0.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss1.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss2.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss3.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss4.jpg" height="300"> 
+<img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss0.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss1.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss2.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss3.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss4.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss5.jpg" height="300"> 
 
 # ToDo
 - route with data ✅
 - login with shared preference ✅
 - array of object ✅
-- json read
-- handle REST API
+- json read ✅
+- handle REST API ✅
 - global state / rx?? / Redux??
 - core API
 
