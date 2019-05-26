@@ -1,8 +1,8 @@
-package com.masfaris.myzone
+package com.masfaris.myzone.activity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import com.masfaris.myzone.R
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_profile.*
 

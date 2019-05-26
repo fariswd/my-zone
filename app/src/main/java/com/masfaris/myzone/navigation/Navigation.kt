@@ -3,6 +3,7 @@ package com.masfaris.myzone.navigation
 import android.content.Context
 import android.content.Intent
 import com.masfaris.myzone.*
+import com.masfaris.myzone.activity.*
 
 class Navigation () {
     fun navigate(
@@ -16,6 +17,7 @@ class Navigation () {
             "Login" -> nav(context, "Login", navData)
             "Profile" -> nav(context, "Profile", navData)
             "Todo" -> nav(context, "Todo", navData)
+            "User" -> nav(context, "User", navData)
         }
 
     }
@@ -48,6 +50,11 @@ class Navigation () {
 
             "Todo" -> {
                 val intent = Intent(context, TodoActivity::class.java)
+                start(context, intent, navData)
+            }
+
+            "User" -> {
+                val intent = Intent(context, UserActivity::class.java)
                 start(context, intent, navData)
             }
         }

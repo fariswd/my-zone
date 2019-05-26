@@ -1,4 +1,4 @@
-package com.masfaris.myzone
+package com.masfaris.myzone.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +7,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
+import com.masfaris.myzone.R
 import com.masfaris.myzone.model.TodoModel
 import kotlinx.android.synthetic.main.activity_todo.*
 
@@ -53,14 +53,14 @@ class TodoActivity : AppCompatActivity() {
 
 class TodoAdapter(var todos: MutableList<TodoModel>) : RecyclerView.Adapter<TodoAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): TodoAdapter.ViewHolder {
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         val view: View = LayoutInflater.from(p0.context).inflate(R.layout.todo_single_list, p0, false)
         return ViewHolder(view)
     }
 
     override fun getItemCount(): Int = todos.size
 
-    override fun onBindViewHolder(p0: TodoAdapter.ViewHolder, p1: Int) {
+    override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         p0.title.text = todos[p1].title
         p0.status.isChecked = todos[p1].status
         p0.status.setOnClickListener {

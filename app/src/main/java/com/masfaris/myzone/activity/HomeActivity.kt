@@ -1,12 +1,11 @@
-package com.masfaris.myzone
+package com.masfaris.myzone.activity
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import com.masfaris.myzone.R
 import com.masfaris.myzone.navigation.Navigation
 import com.masfaris.myzone.navigation.NavData
 import com.squareup.picasso.Picasso
@@ -25,18 +24,18 @@ class HomeActivity : AppCompatActivity() {
         actionbar!!.title = "My Zone"
 
         val member = listOf<Member>(
-                Member(0,"Kwon Eunbi","https://uploads.disquscdn.com/images/2789274fb49d287435c25ecb3cf53950ef8ee0922336e1a3650595b6dcb16603.jpg?w=600&h=906"),
-                Member(1,"Miyawaki Sakura", "https://uploads.disquscdn.com/images/dd6bb5b305d9f598787f0ae860c54bf0dbbd2650f74c17381b7874e507780068.jpg?w=600&h=893"),
-                Member(2,"Kang Hyewon", "https://uploads.disquscdn.com/images/cf68f675ef42d86403f1044f221061ea2e0b251f5c8fc0e62f4157541e718cd5.jpg?w=600&h=893"),
-                Member(3,"Choi Yena", "https://uploads.disquscdn.com/images/b26156ffe6ad97e55a388bc36cb081701178219b9b4c8896a2b8556b895becaf.jpg?w=600&h=893"),
-                Member(4,"Lee Chaeyeon","https://uploads.disquscdn.com/images/83a4431157ca733d765ae9ea906daad65160a69f46e40b49844c6647f5d76c9f.jpg?w=600&h=893"),
-                Member(5,"Kim Chaewon", "https://uploads.disquscdn.com/images/2a5e54b36938b634e0214c83983f0f698a1b2d1a8b86dddb75b948798fe94b41.jpg?w=600&h"),
-                Member(6,"Kim Minjoo", "https://kprofiles.com/wp-content/uploads/2018/09/Minju-1-614x800.jpg"),
-                Member(7,"Yabuki Nako", "https://uploads.disquscdn.com/images/150d7e99743255b0b090e1c2883d55a365ec2ecd69ae9e8e33cefb00986cda50.jpg?w=600&h=893"),
-                Member(8,"Honda Hitomi","https://uploads.disquscdn.com/images/db960d49ac986fac77eac9007dcb2b0fd33833fbbf8a1139c2313b471c4b2e45.jpg?w=600&h=808"),
-                Member(9," Jo Yuri","https://uploads.disquscdn.com/images/02fc8b9870b0b9ce250ee40ff5c9dab6d2ce06a5994210f04127a7e71206f00b.jpg?w=600&h=846"),
-                Member(10,"Ahn Yujin", "https://uploads.disquscdn.com/images/b1b16c7c3d14b9fa7484dc1f0187d573ca68284ca64df4b2d977a4b5f17859c8.jpg?w=600&h=908"),
-                Member(11,"Jang Wonyoung","https://uploads.disquscdn.com/images/bf642838e736aef98d1c65b89fb584931062bf1383362ba828e727f5bd9b7805.jpg?w=600&h=893")
+                Member(0, "Kwon Eunbi", "https://uploads.disquscdn.com/images/2789274fb49d287435c25ecb3cf53950ef8ee0922336e1a3650595b6dcb16603.jpg?w=600&h=906"),
+                Member(1, "Miyawaki Sakura", "https://uploads.disquscdn.com/images/dd6bb5b305d9f598787f0ae860c54bf0dbbd2650f74c17381b7874e507780068.jpg?w=600&h=893"),
+                Member(2, "Kang Hyewon", "https://uploads.disquscdn.com/images/cf68f675ef42d86403f1044f221061ea2e0b251f5c8fc0e62f4157541e718cd5.jpg?w=600&h=893"),
+                Member(3, "Choi Yena", "https://uploads.disquscdn.com/images/b26156ffe6ad97e55a388bc36cb081701178219b9b4c8896a2b8556b895becaf.jpg?w=600&h=893"),
+                Member(4, "Lee Chaeyeon", "https://uploads.disquscdn.com/images/83a4431157ca733d765ae9ea906daad65160a69f46e40b49844c6647f5d76c9f.jpg?w=600&h=893"),
+                Member(5, "Kim Chaewon", "https://uploads.disquscdn.com/images/2a5e54b36938b634e0214c83983f0f698a1b2d1a8b86dddb75b948798fe94b41.jpg?w=600&h"),
+                Member(6, "Kim Minjoo", "https://kprofiles.com/wp-content/uploads/2018/09/Minju-1-614x800.jpg"),
+                Member(7, "Yabuki Nako", "https://uploads.disquscdn.com/images/150d7e99743255b0b090e1c2883d55a365ec2ecd69ae9e8e33cefb00986cda50.jpg?w=600&h=893"),
+                Member(8, "Honda Hitomi", "https://uploads.disquscdn.com/images/db960d49ac986fac77eac9007dcb2b0fd33833fbbf8a1139c2313b471c4b2e45.jpg?w=600&h=808"),
+                Member(9, " Jo Yuri", "https://uploads.disquscdn.com/images/02fc8b9870b0b9ce250ee40ff5c9dab6d2ce06a5994210f04127a7e71206f00b.jpg?w=600&h=846"),
+                Member(10, "Ahn Yujin", "https://uploads.disquscdn.com/images/b1b16c7c3d14b9fa7484dc1f0187d573ca68284ca64df4b2d977a4b5f17859c8.jpg?w=600&h=908"),
+                Member(11, "Jang Wonyoung", "https://uploads.disquscdn.com/images/bf642838e736aef98d1c65b89fb584931062bf1383362ba828e727f5bd9b7805.jpg?w=600&h=893")
         )
 
         Picasso.get().load(member[0].image).into(imageMember);

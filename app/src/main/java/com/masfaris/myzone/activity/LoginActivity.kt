@@ -1,10 +1,10 @@
-package com.masfaris.myzone
+package com.masfaris.myzone.activity
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import com.masfaris.myzone.R
 import com.masfaris.myzone.navigation.Navigation
 
 class LoginActivity : AppCompatActivity () {

@@ -16,10 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".TodoActivity"
-            android:theme="@style/AppBarTheme"></activity>
+            android:name=".activity.UserActivity"
+            android:theme="@style/AppBarTheme">
+        </activity>
         <activity
-            android:name=".DrawerActivity"
+            android:name=".activity.TodoActivity"
+            android:theme="@style/AppBarTheme" />
+        <activity
+            android:name=".activity.DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
@@ -30,13 +34,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".activity.HomeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".activity.ProfileActivity"
             android:theme="@style/AppBarTheme" />
     </application>
 

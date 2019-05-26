@@ -1,9 +1,7 @@
-package com.masfaris.myzone
+package com.masfaris.myzone.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
@@ -12,7 +10,7 @@ import android.support.design.widget.NavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
-import android.view.View
+import com.masfaris.myzone.R
 import com.masfaris.myzone.navigation.NavData
 import com.masfaris.myzone.navigation.Navigation
 import com.squareup.picasso.Picasso
@@ -89,7 +87,8 @@ class DrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.to_do -> toTodo()
+            R.id.nav_todo -> toTodo()
+            R.id.nav_user -> Navigation().navigate(this,"User")
             R.id.nav_logout -> logout()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
