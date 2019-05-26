@@ -15,6 +15,7 @@ class Navigation () {
             "Home" -> nav(context, "Home", navData)
             "Login" -> nav(context, "Login", navData)
             "Profile" -> nav(context, "Profile", navData)
+            "Todo" -> nav(context, "Todo", navData)
         }
 
     }
@@ -42,6 +43,11 @@ class Navigation () {
 
             "Profile" -> {
                 val intent = Intent(context, ProfileActivity::class.java)
+                start(context, intent, navData)
+            }
+
+            "Todo" -> {
+                val intent = Intent(context, TodoActivity::class.java)
                 start(context, intent, navData)
             }
         }

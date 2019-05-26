@@ -9,6 +9,7 @@ Kotlin android native:
 - Custom Navigation Class 
 - Picasso package (URL image load)
 - SharedPreferences for save login state
+- Slide animation on activity change
 
 # SS
 <img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss0.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss1.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss2.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss3.jpg" height="300"> 

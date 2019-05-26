@@ -89,11 +89,16 @@ class DrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.to_do -> toTodo()
             R.id.nav_logout -> logout()
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun toTodo() {
+        Navigation().navigate(this,"Todo")
     }
 
     fun logout() {
@@ -103,6 +108,7 @@ class DrawerActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         editor.commit()
 
         Navigation().navigate(this,"Index")
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         finish()
     }
 
