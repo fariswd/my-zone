@@ -10,9 +10,11 @@ Kotlin android native:
 - Picasso package (URL image load)
 - SharedPreferences for save login state
 - Slide animation on activity change
+- Todo List Activity
+- Recycle View CRUD with adapter
 
 # SS
-<img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss0.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss1.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss2.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss3.jpg" height="300"> 
+<img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss0.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss1.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss2.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss3.jpg" height="300"><img src="https://raw.githubusercontent.com/fariswd/my-zone/master/ss4.jpg" height="300"> 
 
 # ToDo
 - route with data ✅
